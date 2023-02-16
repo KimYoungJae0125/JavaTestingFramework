@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.8'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'groovy'
+}
+
+group = 'com.testframework'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    runtimeOnly 'com.h2database:h2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    testImplementation 'org.codehaus.groovy:groovy-all:2.4.7'
+    testImplementation 'org.spockframework:spock-core:1.0-groovy-2.4'
+}
+
+tasks.named('test') {
+//    useJUnitPlatform()
+}
