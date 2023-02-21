@@ -60,3 +60,20 @@ dependencies {
     class SampleSpock extends Specification {
     }
     ```
+
+### JUnit4와 용어 비교
+| Spock               | JUnit        |
+|--------------------|--------------|
+| Specification       | Test class   |
+| setup()             | @Before      |
+| cleanup()           | @After       |
+| setupSpec()         | @BeforeClass |
+| cleanupSpec()       | @AfterClass  |
+| Feature             |Test|
+| Feature method      |Test method|
+| Data-driven feature |Theory|
+| Condition           |Assertion|
+| Exception condition |@Test(expected=...)|
+| Interaction         |Mock expectation(e.g.in Mockito)|
+
+
